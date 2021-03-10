@@ -71,6 +71,7 @@ const orm = {
         queryString += ') ';
 
         console.log(queryString);
+        
 
         connection.query(queryString, vals, (err, result) => {
             if (err) {
