@@ -1,4 +1,4 @@
-const connection = require('connection');
+const connection = require('./connection.js');
 // const schema = require('./db/schema');
 // const seeds = require('./db/seeds');
 // const mysql = require('mysql');
@@ -51,7 +51,7 @@ const objToSql = (ob) => {
 };
 
 const orm = {
-    all(tableInput, cb) {
+    selectAll(tableInput, cb) {
         const queryString = `SELECT * FROM ${tableInput};`;
         connection.query(queryString, (err, result) => {
             if (err) {
@@ -60,7 +60,7 @@ const orm = {
             cb(result);
         });
     },
-    create(table, cols, vals, cb) {
+    insertOne(table, cols, vals, cb) {
         let queryString = `INSERT INTO ${table}`;
 
         queryString += ' (';
@@ -81,7 +81,7 @@ const orm = {
         });
     },
     // An example of objColVals would be {name: panther, sleepy: true}
-    update(table, objColVals, condition, cb) {
+    updateAll(table, objColVals, condition, cb) {
         let queryString = `UPDATE ${table}`;
 
         queryString += ' SET ';

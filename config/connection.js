@@ -1,4 +1,7 @@
 // create the connection information for the sql database
+
+const mysql = require('mysql');
+
 const connection = mysql.createConnection({
     host: 'localhost',
 
@@ -11,7 +14,11 @@ const connection = mysql.createConnection({
 });
 
 connection.connect((err) => {
-    if (err) throw err;
-    console.log(`connected as id ${connection.threadId}\n`);
+    if (err) {
+        console.error(`error connecting: ${err.stack}`);
+        return;
+      }
+      console.log(`connected as id ${connection.threadId}`);
+});
 
-    module.exports = { connection }
+module.exports = connection;
