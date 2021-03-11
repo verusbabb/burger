@@ -1,10 +1,11 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 document.addEventListener('DOMContentLoaded', (event) => {
-    if (event) {
-        console.info('DOM loaded');
-    }
+  if (event) {
+    console.info('DOM loaded');
+  }
 
-    // UPDATE
+
+  // Update status of burger status
   const devourBtns = document.querySelectorAll('.change-status');
 
   // Set up the event listener for the devour button
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         };
         console.log(devourItNow);
 
+        // send a put/update request to the server
         fetch(`/api/burgers/${id}`, {
           method: 'PUT',
           headers: {
@@ -29,7 +31,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
           body: JSON.stringify(devourItNow),
         }).then((response) => {
-          
+
           if (response.ok) {
             console.log(`changed devoured to: ${devourStatus}`);
             location.reload('/');
@@ -41,20 +43,21 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
   };
 
-  // CREATE
+  // Add a new burger
   const newBurgerBtn = document.getElementById('create-form');
 
+  //Add event listener for submitting a new burger
   if (newBurgerBtn) {
     newBurgerBtn.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      // Grabs the value of the textarea that goes by the name, "quote"
+      //getting the burger name from the form
       const newBurger = {
         burger_name: document.getElementById('bur').value.trim(),
         devoured: false,
       };
 
-      // Send POST request to create a new quote
+      // Send POST request to create a new burger
       fetch('/api/burgers', {
         method: 'POST',
         headers: {
@@ -62,18 +65,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
           'Content-Type': 'application/json',
         },
 
-        // make sure to serialize the JSON body
         body: JSON.stringify(newBurger),
       }).then(() => {
         // Empty the form
         document.getElementById('bur').value = '';
 
-        // Reload the page so the user can see the new quote
         console.log('Added a new burger to the devour wishlist!');
         location.reload();
       });
     });
   }
 
-  
+
 });
