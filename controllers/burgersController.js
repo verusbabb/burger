@@ -18,13 +18,15 @@ router.get('/', (req, res) => {
     });
 });
 
+//route declaration for new burger - calling the insert function from burger.js model
 router.post('/api/burgers', (req, res) => {
     burger.insert(['burger_name', 'devoured'], [req.body.burger_name, req.body.devoured], (result) => {
-        // Send back the ID of the new quote
+        // Send back the ID of the new burger
         res.json({ id: result.insertId });
     });
 });
 
+//route declaration for updating burger devoured status - calling the insert function from burger.js model
 router.put('/api/burgers/:id', (req, res) => {
     const condition = `id = ${req.params.id}`;
 
@@ -44,6 +46,19 @@ router.put('/api/burgers/:id', (req, res) => {
         }
     );
 });
+
+//BONUS:  route declaration for deleting a burger - calling the delete function from burger.js model
+router.delete('/api/burgers/:id', (req, res) => {
+    const condition = `id = ${req.params.id}`;
+  
+    burger.delete(condition, (result) => {
+      if (result.affectedRows === 0) {
+        // If no rows were changed, then the ID must not exist, so 404
+        return res.status(404).end();
+      }
+      res.status(200).end();
+    });
+  });
 
 // Export routes for server.js to use.
 module.exports = router;

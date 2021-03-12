@@ -2,6 +2,7 @@
 
 const mysql = require('mysql');
 
+//creating connection and passing JawsDB_url as host control OR local host
 const connection = mysql.createConnection(process.env.JAWSDB_URL|| {
     host: 'localhost',
 
@@ -13,6 +14,7 @@ const connection = mysql.createConnection(process.env.JAWSDB_URL|| {
     database: 'burger_db',
 });
 
+//establishing connection to server
 connection.connect((err) => {
     if (err) {
         console.error(`error connecting: ${err.stack}`);

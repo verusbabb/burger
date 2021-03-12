@@ -1,9 +1,7 @@
+//require orm
 const orm = require('../config/orm');
 
-// * Also inside `burger.js`, create the code that will call the ORM functions using burger specific input for the ORM.
-
-//     * Export at the end of the `burger.js` file.
-
+//build orm calls for selecting all burgers, inserting a new burger, updating a burger status, and deleting a burger
 const burger = {
     all(cb) {
         orm.selectAll('burgers', (res) => cb(res));
@@ -15,8 +13,13 @@ const burger = {
 
     update(objColVals, condition, cb) {
         orm.updateAll('burgers', objColVals, condition, (res) => cb(res));
-    }
+    },
+
+    delete(condition, cb) {
+        orm.delete('burgers', condition, (res) => cb(res));
+    },
 
 }
 
+//export orm object
 module.exports = burger;

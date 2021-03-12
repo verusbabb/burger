@@ -1,11 +1,23 @@
 <li>
 
+    {{!-- inserting burger name --}}
     {{burger_name}}
 
+    {{!-- creating devour button for every burger not devoured and creating a delete button to delete a burger from the
+    wish list--}}
     {{#unless devoured}}
     <button class="change-status" data-id="{{id}}" data-devourIt="{{devoured}}">Devour!
     </button>
+    <button class="delete-burger" data-id="{{id}}">Delete
+    </button>
     {{/unless}}
+
+
+    {{!-- creating delete button for every burger that has been devoured --}}
+    {{#if devoured}}
+    <button class="delete-burger" data-id="{{id}}">Delete
+    </button>
+    {{/if}}
 
 
 </li>
