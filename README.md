@@ -34,7 +34,7 @@ npm start
 
 Below is a screenshot from the deployed application:
 
-![](https://github.com/verusbabb/Responsive-Portfolio/blob/main/Images/992-portfolio.png)
+![](https://github.com/verusbabb/burger/blob/main/public/assets/img/burger_app.png)
 
 ## *Contributing*
 This is an open source project.  Please email me to contribute or submit push requests.
