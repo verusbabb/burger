@@ -5,6 +5,10 @@ A fun little app that allows users to create a wishlist of burgers they would li
 - indicate when a burger on the wish list has been devoured (and the burger moves to a devoured list).
 - delete burgers from either the wish list or devoured list.
 
+Experience the app:
+
+https://verus-burger.herokuapp.com/
+
 ## *Table of Contents*
 
 - [Description](#description)
