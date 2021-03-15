@@ -1,6 +1,6 @@
 body {
   background-color: lightyellow;
-  /* background-image: url('./img/burgerCollage.png'); */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 h1 {
   display: flex;
