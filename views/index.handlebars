@@ -1,9 +1,7 @@
 <img src='/assets/img/burger2.png'>
-<h1>Track your status on devouring tasty burgers!</h1>
+<h1>Burger Cravings Tracker</h1>
 
-
-<div class='flex-container'></div>
-
+{{!-- container for all devoured burgers/loops through burgers and looking for devoured = true --}}
 <div id='status-sections'>
     <div class='undevoured'>
         <h2>Want to eat:</h2>
@@ -28,6 +26,7 @@
         </ol>
     </div>
 </div>
+
 {{!-- form for adding new burgers --}}
 <div id='add-section'>
     <form id="create-form">
@@ -37,9 +36,5 @@
             <input type="text" id="bur" name="burger">
             <button type="submit">Add it!</button>
         </div>
-
-        {{!-- <button type="submit">Add burger</button> --}}
     </form>
 </div>
-</div>
-{{!-- <footer><a href="http://verusgroup.com/">Verus Group, Ltd.</a></footer> --}}
