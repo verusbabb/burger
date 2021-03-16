@@ -1,13 +1,12 @@
-<div class='top'>
-    <h1>Track your status on devouring tasty burgers!</h1>
+<img src='/assets/img/burger2.png'>
+<h1>Track your status on devouring tasty burgers!</h1>
 
-    <img src='/assets/img/burger2.png' class='burgerImg'></img>
-</div>
 
-{{!-- container for all undevoured burgers/loops through burgers and looking for devoured = false --}}
-<div class='flex-container'>
-    <div class='sections undevoured'>
-        <h2>Plan to devour:</h2>
+<div class='flex-container'></div>
+
+<div id='status-sections'>
+    <div class='undevoured'>
+        <h2>Want to eat:</h2>
         <ol>
             {{#each burgers}}
             {{#unless devoured}}
@@ -18,8 +17,8 @@
     </div>
 
     {{!-- container for all devoured burgers/loops through burgers and looking for devoured = true --}}
-    <div class='sections devoured'>
-        <h2>Already devoured:</h2>
+    <div class='devoured'>
+        <h2>Already ate:</h2>
         <ol>
             {{#each burgers}}
             {{#if devoured}}
@@ -28,20 +27,19 @@
             {{/each}}
         </ol>
     </div>
-
-    {{!-- form for adding new burgers --}}
-    <div class='sections add'>
-        <h2>Add a new burger to the plan:</h2>
-        <form id="create-form">
-
-            <div class="form-group">
-                <label for="bur">Burger name:</label>
-                <input type="text" id="bur" name="burger">
-                <button type="submit">Add burger</button>
-            </div>
-
-            {{!-- <button type="submit">Add burger</button> --}}
-        </form>
-    </div>
-    <footer><a href="http://verusgroup.com/">Verus Group, Ltd.</a></footer>
 </div>
+{{!-- form for adding new burgers --}}
+<div id='add-section'>
+    <form id="create-form">
+        <div class="form-group">
+            <h2>New craving:</h2>
+            <label for="bur">Burger name:</label>
+            <input type="text" id="bur" name="burger">
+            <button type="submit">Add it!</button>
+        </div>
+
+        {{!-- <button type="submit">Add burger</button> --}}
+    </form>
+</div>
+</div>
+{{!-- <footer><a href="http://verusgroup.com/">Verus Group, Ltd.</a></footer> --}}
