@@ -12,11 +12,11 @@ body {
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 h1 {
-  font-size: 48px;
+  font-size: 3.5rm;
   margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
-  text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.80);
+  text-shadow: 2px 2px 2px;
   color: black;
 }
 
@@ -103,9 +103,9 @@ li button {
 
 .form-group button {
   float: right;
-  margin-left: 50px;
+  margin-left: 107px;
 }
 
 .form-group input {
-  width: 300px;
+  width: 250px;
 }
