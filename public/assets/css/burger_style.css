@@ -49,63 +49,66 @@ img {
 }
 
 .devoured {
-  /* display: flex;
-  flex-wrap: wrap; */
+  display: flex;
+  flex-direction: column;
+  height: auto;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
-  padding-left: 10px;
+  margin-top: 2rem;
+  padding-left: 2rem;
   border: 3px solid black;
-  border-radius: 25px;
-  width: 600px;
+  border-radius: 2rem;
+  width: 37rem;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
 }
 
 .undevoured {
-  /* display: flex;
-  flex-wrap: wrap; */
+  display: flex;
+  flex-direction: column;
+  height: auto;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
-  padding-left: 10px;
+  margin-top: 2rem;
+  padding-left: 2rem;
   border: 3px solid black;
-  border-radius: 25px;
-  width: 600px;
+  border-radius: 2rem;
+  width: 37rem;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
 }
 
 #add-section {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   border: 3px solid black;
-  border-radius: 25px;
-  width: 600px;
+  border-radius: 2rem;
+  height: auto;
+  width: 37rem;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
-  padding-bottom: 20px;
-  padding-left: 10px;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
 }
 
 ol {
-  margin-left: -20px;
+  margin-left: -1.2rem;
   border: 10px;
-  padding-bottom: 5px;
+  /* padding-bottom: 5px; */
 }
 
 button {
   justify-content: center;
   width: 100px;
-  border-radius: 10px;
+  border-radius: 2rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 li {
-  padding-top: 5px;
+  padding-top: 0.5rem;
 }
 
 li button {
@@ -115,10 +118,16 @@ li button {
 
 .form-group button {
   float: right;
-  /* margin-left: 107px; */
-  margin-left: 8em;
+  margin-right: 1.7rem;
 }
 
 .form-group input {
-  width: 250px;
+  width: 15rem;
+}
+
+.create-form {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 37rem;
 }
