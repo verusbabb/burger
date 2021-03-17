@@ -110,13 +110,13 @@ li {
 
 li button {
   float: right;
-  margin-right: 2rem;
+  margin-right: 2em;
 }
 
 .form-group button {
   float: right;
   /* margin-left: 107px; */
-  margin-left: 6.5rem;
+  margin-left: 8em;
 }
 
 .form-group input {
